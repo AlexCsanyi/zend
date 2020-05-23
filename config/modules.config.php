@@ -17,5 +17,6 @@ return [
     'Zend\Session',
     'Zend\Router',
     'Zend\Validator',
+    'ZFT',
     'Application',
 ];
