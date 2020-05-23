@@ -7,12 +7,20 @@
 
 namespace Application;
 
-class Module
+use Zend\EventManager\EventInterface;
+use Zend\ModuleManager\Feature\BootstrapListenerInterface;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+
+class Module implements ConfigProviderInterface, BootstrapListenerInterface
 {
     const VERSION = '3.1.4dev';
 
     public function getConfig()
     {
         return include __DIR__ . '/../config/module.config.php';
+    }
+
+    public function onBootstrap(EventInterface $e) {
+        // Implement onBootstrap() method
     }
 }
