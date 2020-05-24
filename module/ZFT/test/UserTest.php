@@ -1,6 +1,6 @@
 <?php 
 
-namespace ZFTTest;
+namespace ZFTest;
 
 use PHPUnit\Framework\TestCase;
 use ZFT\User;

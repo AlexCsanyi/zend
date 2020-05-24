@@ -7,13 +7,16 @@
 
 namespace Application\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use ZFT\User;
 use Zend\View\Model\ViewModel;
+use Zend\Mvc\Controller\AbstractActionController;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
+        $user = new User();
+
         return new ViewModel();
     }
 }
