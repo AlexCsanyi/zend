@@ -7,9 +7,13 @@
 
 namespace Application;
 
+use ZFT\User;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
+use Interop\Container\ContainerInterface;
+use Application\Controller\IndexController;
 use Zend\ServiceManager\Factory\InvokableFactory;
+use Application\Controller\IndexControllerFactory;
 
 return [
     'router' => [
@@ -38,7 +42,7 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
+            Controller\IndexController::class => IndexControllerFactory::class,
         ],
     ],
     'view_manager' => [

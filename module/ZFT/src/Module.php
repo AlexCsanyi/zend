@@ -7,6 +7,7 @@ use ZFT\User\RepositoryFactory;
 use ZFT\User\PostgresDataMapper;
 use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
+use ZFT\User\Repository as UserRepository;
 
 
 class Module implements ServiceProviderInterface{

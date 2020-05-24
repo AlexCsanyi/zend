@@ -13,9 +13,16 @@ use Zend\Mvc\Controller\AbstractActionController;
 
 class IndexController extends AbstractActionController
 {
+    /** @var User\Repository */
+    private $userRepository;
+
+    public function __construct(User\Repository $userRepository) {
+        $this->userRepository = $userRepository;
+    }
+
     public function indexAction()
     {
-        $user = new User();
+        $user = $this->userRepository->getUserById(5);
 
         return new ViewModel();
     }
